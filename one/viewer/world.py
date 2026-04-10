@@ -1,0 +1,92 @@
+import pyglet
+import pyglet.gl as gl
+import one.viewer.render as ovr
+import one.viewer.render_target as ovrt
+import one.viewer.camera as ovc
+import one.viewer.input_manager as ovim
+import one.scene.scene as osc
+
+config = pyglet.gl.Config(
+    major_version=4,
+    minor_version=6,
+    double_buffer=True,
+    depth_size=24,
+    sample_buffers=1,  # multisample
+    samples=4,  # MSAA 4X
+    vsync=False,
+    debug=False
+)
+
+
+class World(pyglet.window.Window):
+    def __init__(self,
+                 cam_pos=(.1, .1, .1),
+                 cam_lookat_pos=(0, 0, 0),
+                 win_size=None,
+                 toggle_auto_cam_orbit=False):
+        display = pyglet.display.get_display()
+        screen = display.get_default_screen()
+        screen_w, screen_h = screen.width, screen.height
+        win_w, win_h = (screen_w * 8 // 10, screen_h * 8 // 10) if win_size is None else win_size
+        super().__init__(win_w, win_h, config=config, resizable=True)
+        self.set_location((screen_w - win_w) // 2, (screen_h - win_h) // 2)
+        self.set_caption("WRS World")
+        self.camera = ovc.Camera(pos=cam_pos, look_at=cam_lookat_pos, aspect=win_w / win_h)
+        self.render = ovr.Render(camera=self.camera)
+        # self.render_target = rt.RenderTarget(width=width, height=height)
+        self.scene = osc.Scene()
+        if toggle_auto_cam_orbit:
+            self.schedule_interval(self.auto_cam_orbit, interval=1 / 30.0)
+        self.input_manager = ovim.InputManager(self)
+        self.fps_display = pyglet.window.FPSDisplay(self)
+
+    def on_resize(self, width, height):
+        gl.glViewport(0, 0, *self.get_framebuffer_size())
+        self.camera._rebuild_projmat(width, height)
+        self.render_target = ovrt.RenderTarget(width, height)
+
+    def on_draw(self):
+        self.clear()
+        if self.scene is not None:
+            # self.render_target.bind()
+            self.render.draw(self.scene)
+            # self.render_target.unbind()
+            # self.render.draw_screen_quad(color_tex=self.render_target.color_tex,
+            #                              width=self.width,
+            #                              height=self.height)
+        # self.fps_display.draw()
+
+    def set_scene(self, scene):
+        self.scene = scene
+
+    def auto_cam_orbit(self, dt, deg_per_sec=.5):
+        angle_rad = deg_per_sec * dt * (3.14159265 / 180.0)
+        self.camera.orbit(angle_rad=angle_rad)
+
+    def schedule_interval(self, function, interval=.01,
+                          *args, **kwargs):
+        pyglet.clock.schedule_interval(
+            function, interval, *args, **kwargs)
+
+    def schedule_once(self, function, delay=.01, *args, **kwargs):
+        pyglet.clock.schedule_once(function, delay, *args, **kwargs)
+
+    def schedule_interval_after(self, function, delay,
+                                interval=.01, *args, **kwargs):
+        def _start_cb(dt):
+            pyglet.clock.schedule_interval(
+                function, interval, *args, **kwargs)
+
+        pyglet.clock.schedule_once(_start_cb, delay)
+
+    def stop(self, function):
+        pyglet.clock.unschedule(function)
+
+    def stop_after(self, function, delay):
+        def _stop_cb(dt):
+            self.stop(function)
+
+        pyglet.clock.schedule_once(_stop_cb, delay)
+
+    def run(self):
+        pyglet.app.run()

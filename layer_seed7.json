@@ -1,0 +1,201 @@
+{
+  "target_height": 0.2,
+  "placements": [
+    {
+      "block_id": "single:box_021",
+      "box_instance_ids": [
+        "box_021"
+      ],
+      "box_type_ids": [
+        "L15"
+      ],
+      "x": 0.31,
+      "y": 0.2,
+      "yaw": 0.0,
+      "size_x": 0.62,
+      "size_y": 0.4,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "single:box_010",
+      "box_instance_ids": [
+        "box_010"
+      ],
+      "box_type_ids": [
+        "H14"
+      ],
+      "x": 0.8,
+      "y": 0.14,
+      "yaw": 0.0,
+      "size_x": 0.36,
+      "size_y": 0.28,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "stack:box_004+box_011",
+      "box_instance_ids": [
+        "box_004",
+        "box_011"
+      ],
+      "box_type_ids": [
+        "H02",
+        "H02"
+      ],
+      "x": 1.055,
+      "y": 0.1,
+      "yaw": 1.5707963267948966,
+      "size_x": 0.15,
+      "size_y": 0.2,
+      "target_height": 0.2,
+      "component_count": 2,
+      "is_composite": true
+    },
+    {
+      "block_id": "single:box_013",
+      "box_instance_ids": [
+        "box_013"
+      ],
+      "box_type_ids": [
+        "H14"
+      ],
+      "x": 0.18,
+      "y": 0.54,
+      "yaw": 0.0,
+      "size_x": 0.36,
+      "size_y": 0.28,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "single:box_038",
+      "box_instance_ids": [
+        "box_038"
+      ],
+      "box_type_ids": [
+        "H14"
+      ],
+      "x": 0.54,
+      "y": 0.54,
+      "yaw": 0.0,
+      "size_x": 0.36,
+      "size_y": 0.28,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "single:box_037",
+      "box_instance_ids": [
+        "box_037"
+      ],
+      "box_type_ids": [
+        "M05"
+      ],
+      "x": 0.895,
+      "y": 0.53,
+      "yaw": 0.0,
+      "size_x": 0.35,
+      "size_y": 0.26,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "single:box_020",
+      "box_instance_ids": [
+        "box_020"
+      ],
+      "box_type_ids": [
+        "H13"
+      ],
+      "x": 0.17,
+      "y": 0.81,
+      "yaw": 0.0,
+      "size_x": 0.34,
+      "size_y": 0.26,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "single:box_053",
+      "box_instance_ids": [
+        "box_053"
+      ],
+      "box_type_ids": [
+        "H13"
+      ],
+      "x": 0.51,
+      "y": 0.81,
+      "yaw": 0.0,
+      "size_x": 0.34,
+      "size_y": 0.26,
+      "target_height": 0.2,
+      "component_count": 1,
+      "is_composite": false
+    },
+    {
+      "block_id": "stack:box_007+box_009",
+      "box_instance_ids": [
+        "box_007",
+        "box_009"
+      ],
+      "box_type_ids": [
+        "H01",
+        "H01"
+      ],
+      "x": 0.77,
+      "y": 0.75,
+      "yaw": 0.0,
+      "size_x": 0.18,
+      "size_y": 0.14,
+      "target_height": 0.2,
+      "component_count": 2,
+      "is_composite": true
+    },
+    {
+      "block_id": "stack:box_022+box_035",
+      "box_instance_ids": [
+        "box_022",
+        "box_035"
+      ],
+      "box_type_ids": [
+        "H01",
+        "H01"
+      ],
+      "x": 0.9500000000000001,
+      "y": 0.75,
+      "yaw": 0.0,
+      "size_x": 0.18,
+      "size_y": 0.14,
+      "target_height": 0.2,
+      "component_count": 2,
+      "is_composite": true
+    }
+  ],
+  "packed_block_count": 10,
+  "used_box_count": 13,
+  "used_box_instance_ids": [
+    "box_004",
+    "box_007",
+    "box_009",
+    "box_010",
+    "box_011",
+    "box_013",
+    "box_020",
+    "box_021",
+    "box_022",
+    "box_035",
+    "box_037",
+    "box_038",
+    "box_053"
+  ],
+  "covered_area": 0.8986000000000001,
+  "utilization_2d": 0.7488333333333335,
+  "message": "Generated 10 layer blocks at target height 0.20 m."
+}

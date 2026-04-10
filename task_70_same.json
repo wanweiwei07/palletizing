@@ -1,0 +1,926 @@
+{
+  "seed": null,
+  "summary": {
+    "count": 70,
+    "unique_box_type_count": 1,
+    "box_type_counts": {
+      "H10": 70
+    },
+    "frequency_group_counts": {
+      "high": 70
+    },
+    "total_volume": 0.9072
+  },
+  "boxes": [
+    {
+      "instance_id": "box_001",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_002",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_003",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_004",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_005",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_006",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_007",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_008",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_009",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_010",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_011",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_012",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_013",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_014",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_015",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_016",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_017",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_018",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_019",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_020",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_021",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_022",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_023",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_024",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_025",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_026",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_027",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_028",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_029",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_030",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_031",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_032",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_033",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_034",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_035",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_036",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_037",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_038",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_039",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_040",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_041",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_042",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_043",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_044",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_045",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_046",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_047",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_048",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_049",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_050",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_051",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_052",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_053",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_054",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_055",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_056",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_057",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_058",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_059",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_060",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_061",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_062",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_063",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_064",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_065",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_066",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_067",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_068",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_069",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    },
+    {
+      "instance_id": "box_070",
+      "box_type_id": "H10",
+      "length": 0.3,
+      "width": 0.24,
+      "height": 0.18,
+      "frequency_group": "high",
+      "allowed_yaws": [
+        0.0,
+        1.5707963267948966
+      ],
+      "volume": 0.01296
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "pallet_width": 12,
+  "pallet_height": 10,
+  "items": [
+    {"item_id": "A", "width": 6, "height": 5, "allow_rotation": true},
+    {"item_id": "B", "width": 6, "height": 5, "allow_rotation": true},
+    {"item_id": "C", "width": 6, "height": 5, "allow_rotation": true},
+    {"item_id": "D", "width": 6, "height": 5, "allow_rotation": true},
+    {"item_id": "E", "width": 4, "height": 5, "allow_rotation": true},
+    {"item_id": "F", "width": 4, "height": 5, "allow_rotation": true}
+  ]
+}
