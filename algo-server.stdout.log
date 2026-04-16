@@ -1,0 +1,389 @@
+HTTP server listening on http://127.0.0.1:18080
+POST /v1/algorithms/pallet-plans
+[2026-04-15T15:48:11+08:00] outgoing GET /health, status=200, bytes=64
+{
+  "status": "ok",
+  "timestamp": "2026-04-15T15:48:11+08:00"
+}
+[2026-04-15T15:48:11+08:00] incoming POST /v1/algorithms/pallet-plans, bytes=7131
+{
+  "protocolVersion": "1.4.0",
+  "messageType": "AlgoInput",
+  "traceId": "d0a7f1de-8383-4539-ae55-d72f27595867",
+  "timestamp": "2026-04-14T00:01:19.6449392+08:00",
+  "payload": {
+    "taskId": "TASK-20260414000119",
+    "orderId": "ORD-20260414000119",
+    "materialItems": [
+      {
+        "itemId": "ITEM-001",
+        "skuCode": "SKU-02",
+        "name": "Carton-2",
+        "qty": 1,
+        "dimensions": {
+          "length": 258,
+          "width": 185,
+          "height": 173
+        },
+        "weight": 8.06,
+        "gripType": "vacuum",
+        "orientationRules": {
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-002",
+        "skuCode": "SKU-03",
+        "name": "Carton-3",
+        "qty": 1,
+        "dimensions": {
+          "length": 297,
+          "width": 408,
+          "height": 298
+        },
+        "weight": 8.58,
+        "gripType": "vacuum",
+        "orientationRules": {
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-003",
+        "skuCode": "SKU-04",
+        "name": "Carton-4",
+        "qty": 1,
+        "dimensions": {
+          "length": 408,
+          "width": 236,
+          "height": 196
+        },
+        "weight": 6.85,
+        "gripType": "vacuum",
+        "orientationRules": {
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      }
+    ],
+    "existingPallets": [],
+    "scene": {
+      "pallet": {
+        "palletType": "EURO",
+        "dimensions": {
+          "length": 1200,
+          "width": 800,
+          "height": 144
+        },
+        "maxLoadWeight": 1000,
+        "maxLoadHeight": 1800
+      },
+      "robots": [
+        {
+          "robotId": "RB-01",
+          "toolType": "vacuum",
+          "maxPayload": 35,
+          "maxReachRadius": 2200
+        },
+        {
+          "robotId": "RB-02",
+          "toolType": "clamp",
+          "maxPayload": 50,
+          "maxReachRadius": 2400
+        }
+      ],
+      "constraints": {
+        "materialKnowledge": {
+          "mode": "LOOKAHEAD_N_FIXED_ORDER",
+          "lookaheadCount": 5,
+          "reorderAllowed": false
+        },
+        "palletPolicy": {
+          "mode": "UNTIL_ALL_ITEMS_PLACED"
+        },
+        "bufferPolicy": {
+          "mode": "NO_BUFFER"
+        }
+      }
+    }
+  }
+}
+[2026-04-15T15:48:27+08:00] outgoing POST /v1/algorithms/pallet-plans, status=200, bytes=1927
+{
+  "protocolVersion": "1.5.0",
+  "messageType": "PalletPlan",
+  "sourceSystem": "algo",
+  "schemaVersion": "PalletPlan-1.5.0",
+  "traceId": "d0a7f1de-8383-4539-ae55-d72f27595867",
+  "timestamp": "2026-04-15T15:48:27+08:00",
+  "payload": {
+    "taskId": "TASK-20260414000119",
+    "planId": "PLAN-TASK-20260414000119",
+    "planStatus": "SUCCESS",
+    "pallets": [
+      {
+        "palletId": "P1",
+        "loadSummary": {
+          "totalItems": 3,
+          "totalWeight": 23.49,
+          "finalHeight": 298.0
+        },
+        "placements": [
+          {
+            "seqNo": 1,
+            "itemId": "ITEM-002",
+            "skuCode": "SKU-03",
+            "itemDimensions": {
+              "length": 297.0,
+              "width": 408.0,
+              "height": 298.0
+            },
+            "pose": {
+              "x": 200.0,
+              "y": 125.0,
+              "z": 149.0,
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 90.0
+            }
+          },
+          {
+            "seqNo": 2,
+            "itemId": "ITEM-001",
+            "skuCode": "SKU-02",
+            "itemDimensions": {
+              "length": 258.0,
+              "width": 185.0,
+              "height": 173.0
+            },
+            "pose": {
+              "x": 75.0,
+              "y": 375.0,
+              "z": 86.5,
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 90.0
+            }
+          },
+          {
+            "seqNo": 3,
+            "itemId": "ITEM-003",
+            "skuCode": "SKU-04",
+            "itemDimensions": {
+              "length": 408.0,
+              "width": 236.0,
+              "height": 196.0
+            },
+            "pose": {
+              "x": 200.0,
+              "y": 700.0,
+              "z": 98.0,
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 90.0
+            }
+          }
+        ]
+      }
+    ],
+    "failReason": null
+  }
+}
+[2026-04-15T15:48:28+08:00] incoming POST /v1/algorithms/pallet-plans, bytes=7444
+{
+  "protocolVersion": "1.4.0",
+  "messageType": "AlgoInput",
+  "traceId": "d0a7f1de-8383-4539-ae55-d72f27595867",
+  "timestamp": "2026-04-14T00:01:19.6449392+08:00",
+  "payload": {
+    "taskId": "TASK-20260414000119",
+    "orderId": "ORD-20260414000119",
+    "materialItems": [
+      {
+        "itemId": "ITEM-001",
+        "skuCode": "SKU-02",
+        "name": "Carton-2",
+        "qty": 1,
+        "dimensions": {
+          "length": 258,
+          "width": 185,
+          "height": 173
+        },
+        "weight": 8.06,
+        "gripType": "vacuum",
+        "orientationRules": {
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-002",
+        "skuCode": "SKU-03",
+        "name": "Carton-3",
+        "qty": 1,
+        "dimensions": {
+          "length": 297,
+          "width": 408,
+          "height": 298
+        },
+        "weight": 8.58,
+        "gripType": "vacuum",
+        "orientationRules": {
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-003",
+        "skuCode": "SKU-04",
+        "name": "Carton-4",
+        "qty": 1,
+        "dimensions": {
+          "length": 408,
+          "width": 236,
+          "height": 196
+        },
+        "weight": 6.85,
+        "gripType": "vacuum",
+        "orientationRules": {
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      }
+    ],
+    "existingPallets": [],
+    "scene": {
+      "pallet": {
+        "palletType": "EURO",
+        "dimensions": {
+          "length": 1200,
+          "width": 800,
+          "height": 144
+        },
+        "maxLoadWeight": 1000,
+        "maxLoadHeight": 1800
+      },
+      "robots": [
+        {
+          "robotId": "RB-01",
+          "toolType": "vacuum",
+          "maxPayload": 35,
+          "maxReachRadius": 2200
+        },
+        {
+          "robotId": "RB-02",
+          "toolType": "clamp",
+          "maxPayload": 50,
+          "maxReachRadius": 2400
+        }
+      ],
+      "constraints": {
+        "materialKnowledge": {
+          "mode": "LOOKAHEAD_N_FIXED_ORDER",
+          "lookaheadCount": 5,
+          "reorderAllowed": false
+        },
+        "palletPolicy": {
+          "mode": "UNTIL_ALL_ITEMS_PLACED"
+        },
+        "bufferPolicy": {
+          "mode": "NO_BUFFER"
+        }
+      }
+    },
+    "extra": {
+      "solver": {
+        "algorithm": "ga3d-seam",
+        "timeLimitSeconds": 8
+      }
+    }
+  }
+}
+[2026-04-15T15:48:36+08:00] outgoing POST /v1/algorithms/pallet-plans, status=200, bytes=1928
+{
+  "protocolVersion": "1.5.0",
+  "messageType": "PalletPlan",
+  "sourceSystem": "algo",
+  "schemaVersion": "PalletPlan-1.5.0",
+  "traceId": "d0a7f1de-8383-4539-ae55-d72f27595867",
+  "timestamp": "2026-04-15T15:48:36+08:00",
+  "payload": {
+    "taskId": "TASK-20260414000119",
+    "planId": "PLAN-TASK-20260414000119",
+    "planStatus": "SUCCESS",
+    "pallets": [
+      {
+        "palletId": "P1",
+        "loadSummary": {
+          "totalItems": 3,
+          "totalWeight": 23.49,
+          "finalHeight": 298.0
+        },
+        "placements": [
+          {
+            "seqNo": 1,
+            "itemId": "ITEM-002",
+            "skuCode": "SKU-03",
+            "itemDimensions": {
+              "length": 297.0,
+              "width": 408.0,
+              "height": 298.0
+            },
+            "pose": {
+              "x": 125.0,
+              "y": 200.0,
+              "z": 149.0,
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 90.0
+            }
+          },
+          {
+            "seqNo": 2,
+            "itemId": "ITEM-003",
+            "skuCode": "SKU-04",
+            "itemDimensions": {
+              "length": 408.0,
+              "width": 236.0,
+              "height": 196.0
+            },
+            "pose": {
+              "x": 100.0,
+              "y": 600.0,
+              "z": 98.0,
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 90.0
+            }
+          },
+          {
+            "seqNo": 3,
+            "itemId": "ITEM-001",
+            "skuCode": "SKU-02",
+            "itemDimensions": {
+              "length": 258.0,
+              "width": 185.0,
+              "height": 173.0
+            },
+            "pose": {
+              "x": 275.0,
+              "y": 675.0,
+              "z": 86.5,
+              "rx": 0.0,
+              "ry": 0.0,
+              "rz": 90.0
+            }
+          }
+        ]
+      }
+    ],
+    "failReason": null
+  }
+}
