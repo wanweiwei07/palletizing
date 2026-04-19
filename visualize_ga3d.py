@@ -40,6 +40,44 @@ def _color_for_item(item_id: str, type_map: dict[str, int]) -> np.ndarray:
     return ITEM_COLORS[type_map[prefix] % len(ITEM_COLORS)]
 
 
+def _compute_support_ratios(
+    placements: list[Fill3DPlacement],
+) -> dict[str, float]:
+    """For each box, return (covered base area) / (base area). 1.0 = floor.
+
+    Uses 5mm-cell boolean mask + numpy slice OR — handles overlapping
+    supports correctly without Python per-cell loops.
+    """
+    ratios: dict[str, float] = {}
+    CELL = 5  # mm per mask cell
+    for b in placements:
+        if b.z == 0:
+            ratios[b.item_id] = 1.0
+            continue
+        nx = b.size_x // CELL
+        ny = b.size_y // CELL
+        if nx == 0 or ny == 0:
+            ratios[b.item_id] = 1.0
+            continue
+        mask = np.zeros((nx, ny), dtype=bool)
+        for s in placements:
+            if s is b or s.z + s.size_z != b.z:
+                continue
+            x0 = max(b.x, s.x)
+            x1 = min(b.x + b.size_x, s.x + s.size_x)
+            y0 = max(b.y, s.y)
+            y1 = min(b.y + b.size_y, s.y + s.size_y)
+            if x1 <= x0 or y1 <= y0:
+                continue
+            ix0 = (x0 - b.x) // CELL
+            ix1 = (x1 - b.x) // CELL
+            iy0 = (y0 - b.y) // CELL
+            iy1 = (y1 - b.y) // CELL
+            mask[ix0:ix1, iy0:iy1] = True
+        ratios[b.item_id] = float(mask.sum()) / (nx * ny)
+    return ratios
+
+
 class GA3DViewer(world_view.World):
     def __init__(
         self,
@@ -65,6 +103,18 @@ class GA3DViewer(world_view.World):
         self.paused = False
         self.total = len(placements)
         self.type_map: dict[str, int] = {}
+        self.support_ratios = _compute_support_ratios(placements)
+        self.last_ratio: float | None = None
+        bad = [(p.item_id, self.support_ratios[p.item_id])
+               for p in placements
+               if self.support_ratios[p.item_id] < 0.9]
+        bad.sort(key=lambda x: x[1])
+        if bad:
+            print(f"Support < 0.9: {len(bad)} boxes")
+            for bid, r in bad[:15]:
+                print(f"  {bid}: {r:.0%}")
+        else:
+            print("All boxes >= 0.9 support")
 
         # Pallet base
         thickness = 0.02
@@ -108,6 +158,10 @@ class GA3DViewer(world_view.World):
         cz = self.base_z + p.z / 1000 + sz / 2
 
         color = _color_for_item(p.item_id, self.type_map)
+        ratio = self.support_ratios.get(p.item_id, 1.0)
+        # Floating boxes (ratio < 0.9): red tint override
+        if ratio < 0.9:
+            color = const.Tab20.RED_DEEP
         prim.box(
             pos=np.array([cx, cy, cz], dtype=np.float32),
             half_extents=np.array([sx / 2, sy / 2, sz / 2], dtype=np.float32),
@@ -115,13 +169,19 @@ class GA3DViewer(world_view.World):
             alpha=1.0,
         ).attach_to(self.scene)
 
+        self.last_ratio = ratio
         self.current_index += 1
         self._update_status()
 
     def _update_status(self) -> None:
         state = "paused" if self.paused else ("finished" if self.current_index >= self.total else "playing")
+        ratio_str = (
+            f"sup={self.last_ratio:.0%} | " if self.last_ratio is not None
+            else ""
+        )
         self.status_label.text = (
             f"boxes: {self.current_index}/{self.total} | "
+            f"{ratio_str}"
             f"{self.result_info} | {state} | "
             "space:pause  right:next  r:restart"
         )
@@ -149,32 +209,53 @@ def main():
     import json
     import sys
 
-    seed = int(sys.argv[1]) if len(sys.argv) > 1 else 7
-    task_file = f"task_70_seed{seed}_dims.json"
-    with open(task_file) as f:
-        boxes = json.load(f)
-    print(f"Task: {task_file} ({len(boxes)} boxes)")
-    items = tuple(
-        Fill3DItem(
-            item_id=f"box_{i:03d}",
-            length=round(b["length"] * 1000),
-            width=round(b["width"] * 1000),
-            height=round(b["height"] * 1000),
+    arg = sys.argv[1] if len(sys.argv) > 1 else "42"
+    if arg == "lx":
+        task_file = "task_lx.json"
+        with open(task_file) as f:
+            data = json.load(f)
+        payload = data["payload"]
+        raw = payload["materialItems"]
+        pallet = payload["scene"]["pallet"]
+        PL = round(pallet["dimensions"]["length"])
+        PW = round(pallet["dimensions"]["width"])
+        PH = round(pallet["maxLoadHeight"])
+        items = tuple(
+            Fill3DItem(
+                item_id=it["itemId"],
+                length=round(it["dimensions"]["length"]),
+                width=round(it["dimensions"]["width"]),
+                height=round(it["dimensions"]["height"]),
+                allow_rotation=it["orientationRules"]["canRotateZ"],
+            )
+            for it in raw
         )
-        for i, b in enumerate(boxes)
-    )
-    PL, PW, PH = 1200, 800, 1500
+    else:
+        seed = int(arg)
+        task_file = f"task_70_seed{seed}_dims.json"
+        with open(task_file) as f:
+            boxes = json.load(f)
+        items = tuple(
+            Fill3DItem(
+                item_id=f"box_{i:03d}",
+                length=round(b["length"] * 1000),
+                width=round(b["width"] * 1000),
+                height=round(b["height"] * 1000),
+            )
+            for i, b in enumerate(boxes)
+        )
+        PL, PW, PH = 1200, 800, 1500
+    print(f"Task: {task_file} ({len(items)} boxes) pallet={PL}x{PW}x{PH}")
     inst = Fill3DInstance(
         pallet_length=PL, pallet_width=PW,
         pallet_max_height=PH, items=items,
     )
 
     cfg = GA3DConfig(
-        pop_size=1024, time_limit_seconds=30.0,
-        grid_res=50, min_support_ratio=0.9,
+        pop_size=2048, time_limit_seconds=60.0,
+        min_support_ratio=0.9, seed=42,
     )
     print(f"Running GA3D: {len(items)} items, "
-          f"grid_res={cfg.grid_res}mm, "
           f"time_limit={cfg.time_limit_seconds}s ...")
     t0 = time.perf_counter()
     result = solve_ga3d(inst, cfg)
