@@ -37,9 +37,9 @@ python visualize_ga3d.py 7      # task_70_seed7
 
 ### RL3D — Train / Evaluate / Visualize
 ```bash
-# Train PPO on task_lx (30 epochs, ~24 min on RTX 5090 at N=16384)
-PYTHONPATH=. python -m rl3d.train --n-envs 16384 --n-steps 32 \
-    --batch-size 131072 --epochs 30
+# Train PPO on task_lx (~3 min on RTX 5090 — matches GA peak)
+PYTHONPATH=. python -m rl3d.train --n-envs 2048 --n-steps 32 \
+    --batch-size 16384 --epochs 32
 
 # Evaluate best-of-N stochastic rollout
 PYTHONPATH=. python -m rl3d.eval \
@@ -106,15 +106,20 @@ Volume ratio = packed volume / (pallet base area × max box top height)
 
 ### task_lx — GA3D vs RL3D (seed=42)
 
-| Solver | Setting                           | Packed | Volume Ratio | Notes             |
-|--------|-----------------------------------|--------|--------------|-------------------|
-| GA3D   | pop=1024, 60 s                    | 35/35  | 78.1%        | plateau           |
-| GA3D   | pop=4096, 60 s                    | 35/35  | 78.7%        | peak ~80%         |
-| RL3D   | N=256, deterministic              | 35/35  | 74.6%        | single rollout    |
-| RL3D   | N=16384, T=1.0, best-of-N         | 35/35  | 79.2%        | —                 |
-| RL3D   | **N=16384, T=1.5, best-of-N**     | 35/35  | **80.3%**    | matches GA peak   |
+| Solver | Setting                                           | Train time | Packed | Volume Ratio | Notes                       |
+|--------|---------------------------------------------------|------------|--------|--------------|-----------------------------|
+| GA3D   | pop=1024, 60 s                                    | —          | 35/35  | 78.1%        | plateau                     |
+| GA3D   | pop=4096, 60 s                                    | —          | 35/35  | 78.7%        | peak ~80%                   |
+| RL3D   | deterministic (N=256 eval)                        | 24 min     | 35/35  | 74.6%        | single rollout              |
+| RL3D   | N=16384 × 4 ep, T=1.5 best-of-N eval              | 3 min      | 34/35  | 72.9%        | too few gradient updates    |
+| RL3D   | **N=2048 × 32 ep, T=1.5 best-of-N eval**          | **3 min**  | 35/35  | **79.8%**    | **matches 24-min run**      |
+| RL3D   | N=16384 × 30 ep, T=1.5 best-of-N eval             | 24 min     | 35/35  | 80.3%        | matches GA peak             |
 
-The RL policy's final boost comes from stochastic sampling + temperature at inference, not more training — the classic neural combinatorial optimization pattern (POMO, Attention Model). N=16384 rollouts finish in ~3 s on RTX 5090 because the vectorized env runs ~12k env-steps/s.
+Two inference-time and one training-time lessons from this table:
+
+1. **Stochastic rollout + temperature + best-of-N is the final boost**, not more training — the classic neural combinatorial-optimization pattern (POMO, Attention Model). N=16384 rollouts finish in ~3 s because the vectorized env runs ~12k env-steps/s.
+2. **Deterministic argmax is ~5 pts worse** than stochastic best-of-N; always evaluate stochastic.
+3. **Training bottleneck is gradient update count, not sample diversity.** Same total transitions (2.1M) reach the ceiling in 3 minutes with N=2048 × 32 epochs, but need 24 minutes with N=16384 × 30 epochs. Smaller envs, more epochs.
 
 ## Tuning Guide
 
