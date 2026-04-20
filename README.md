@@ -12,6 +12,12 @@ A 3D bin packing solver for robotic palletizing. Given a set of boxes with varyi
 - Population decoded in parallel on GPU (fused Triton scan kernel, one block per chromosome)
 - Structured initialization: 2/3 of population sorted long-to-short (half rotates steps `[0, n/2)`, half rotates `[n/2, n)`), remaining 1/3 random permutation with alternating rotation
 
+### RL3D — Masked PPO Reinforcement Learning
+- GPU-native vectorized env (rl_games + PyTorch), all tensors stay on GPU end-to-end
+- Discrete masked action space: `A = 2n` (box × rotation), infeasible actions masked each step
+- Per-step greedy scan: `F.max_pool2d` over unique footprints at 10 mm grid (~12k env-steps/s at N=16384)
+- MLP policy `[512, 256, 128]`, PPO with CategoricalMasked; inference uses **stochastic rollout + best-of-N with temperature**
+
 ### CP-SAT — Constraint Programming (fill3d)
 - Exact solver using Google OR-Tools CP-SAT
 - Probe-based support area constraints
@@ -27,6 +33,21 @@ A 3D bin packing solver for robotic palletizing. Given a set of boxes with varyi
 ### GA3D — Mixed-Type 3D Packing + Visualization
 ```bash
 python visualize_ga3d.py 7      # task_70_seed7
+```
+
+### RL3D — Train / Evaluate / Visualize
+```bash
+# Train PPO on task_lx (30 epochs, ~24 min on RTX 5090 at N=16384)
+PYTHONPATH=. python -m rl3d.train --n-envs 16384 --n-steps 32 \
+    --batch-size 131072 --epochs 30
+
+# Evaluate best-of-N stochastic rollout
+PYTHONPATH=. python -m rl3d.eval \
+    --model runs/pallet_ppo/nn/pallet_ppo.pth \
+    --n-envs 16384 --temperature 1.5
+
+# Visualize the best of N=16384 rollouts
+python visualize_rl3d.py --temperature 1.5
 ```
 
 ### Layer-Based Planner — Single-Type Packing
@@ -51,6 +72,7 @@ python generate_task.py --count 70 --seed 7
 
 ```
 ga3d/           GPU-accelerated genetic algorithm solver
+rl3d/           Masked PPO RL solver (rl_games + GPU VecEnv)
 fill3d/         3D CP-SAT constraint solver
 fill2d/         2D CP-SAT bin packing solver
 palletizing/    Layer-based planner, task generator, box catalog
@@ -81,6 +103,18 @@ tests/          Unit tests
 All boxes placed in every configuration. Volume ratio clusters tightly at 78.1–78.7% — with the structured initialization, pop=512/30s already reaches the ceiling on this instance.
 
 Volume ratio = packed volume / (pallet base area × max box top height)
+
+### task_lx — GA3D vs RL3D (seed=42)
+
+| Solver | Setting                           | Packed | Volume Ratio | Notes             |
+|--------|-----------------------------------|--------|--------------|-------------------|
+| GA3D   | pop=1024, 60 s                    | 35/35  | 78.1%        | plateau           |
+| GA3D   | pop=4096, 60 s                    | 35/35  | 78.7%        | peak ~80%         |
+| RL3D   | N=256, deterministic              | 35/35  | 74.6%        | single rollout    |
+| RL3D   | N=16384, T=1.0, best-of-N         | 35/35  | 79.2%        | —                 |
+| RL3D   | **N=16384, T=1.5, best-of-N**     | 35/35  | **80.3%**    | matches GA peak   |
+
+The RL policy's final boost comes from stochastic sampling + temperature at inference, not more training — the classic neural combinatorial optimization pattern (POMO, Attention Model). N=16384 rollouts finish in ~3 s on RTX 5090 because the vectorized env runs ~12k env-steps/s.
 
 ## Tuning Guide
 

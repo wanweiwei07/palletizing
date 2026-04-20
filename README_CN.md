@@ -12,6 +12,12 @@
 - 种群在 GPU 上并行解码（融合 Triton 扫描核，每个染色体一个 block）
 - 结构化初始化：种群 2/3 按长度从大到小排序（其中一半旋转前 `[0, n/2)` 步，另一半旋转后 `[n/2, n)` 步），剩余 1/3 随机排列，旋转按奇偶交替
 
+### RL3D — 带掩码的 PPO 强化学习
+- GPU 原生向量化环境（rl_games + PyTorch），所有张量端到端驻留 GPU
+- 离散掩码动作空间：`A = 2n`（箱 × 旋转），每步屏蔽非法动作
+- 每步贪心扫描：10 mm 网格下按不同底面 `F.max_pool2d`（N=16384 时 ~12k env-step/s）
+- MLP 策略 `[512, 256, 128]`，PPO + CategoricalMasked；推理采用**随机采样 + 温度 + best-of-N**
+
 ### CP-SAT — 约束规划 (fill3d)
 - 使用 Google OR-Tools CP-SAT 精确求解
 - 基于探针的支撑面积约束
@@ -27,6 +33,21 @@
 ### GA3D — 多箱型三维装箱 + 可视化
 ```bash
 python visualize_ga3d.py 7      # task_70_seed7
+```
+
+### RL3D — 训练 / 评估 / 可视化
+```bash
+# 训练 PPO（30 epoch，RTX 5090 @ N=16384 约 24 分钟）
+PYTHONPATH=. python -m rl3d.train --n-envs 16384 --n-steps 32 \
+    --batch-size 131072 --epochs 30
+
+# 评估：随机采样 + best-of-N
+PYTHONPATH=. python -m rl3d.eval \
+    --model runs/pallet_ppo/nn/pallet_ppo.pth \
+    --n-envs 16384 --temperature 1.5
+
+# 可视化 N=16384 中最优的一次 rollout
+python visualize_rl3d.py --temperature 1.5
 ```
 
 ### 分层规划器 — 单箱型码垛
@@ -51,6 +72,7 @@ python generate_task.py --count 70 --seed 7
 
 ```
 ga3d/           GPU 加速遗传算法求解器
+rl3d/           掩码 PPO 强化学习求解器（rl_games + GPU VecEnv）
 fill3d/         三维 CP-SAT 约束求解器
 fill2d/         二维 CP-SAT 装箱求解器
 palletizing/    分层规划器、任务生成器、箱型目录
@@ -81,6 +103,18 @@ tests/          单元测试
 所有配置均装完全部 35 箱，体积利用率集中在 78.1–78.7%。结构化初始化下，pop=512/30s 已经达到该任务的上限。
 
 体积利用率 = 箱子总体积 /（托盘底面积 × 最高箱子顶部高度）
+
+### task_lx — GA3D vs RL3D（seed=42）
+
+| 求解器 | 配置                            | 装载   | 体积利用率   | 说明              |
+|--------|---------------------------------|--------|-------------|-------------------|
+| GA3D   | pop=1024, 60 s                  | 35/35  | 78.1%       | 平台期            |
+| GA3D   | pop=4096, 60 s                  | 35/35  | 78.7%       | 峰值 ~80%         |
+| RL3D   | N=256，确定性策略               | 35/35  | 74.6%       | 单次 rollout      |
+| RL3D   | N=16384, T=1.0，best-of-N       | 35/35  | 79.2%       | —                 |
+| RL3D   | **N=16384, T=1.5，best-of-N**   | 35/35  | **80.3%**   | 持平 GA 峰值      |
+
+RL 的最终增益来自推理期的随机采样 + 温度，而非更多训练——这与 POMO、Attention Model 等神经组合优化论文的做法一致。在 RTX 5090 上，N=16384 次 rollout 只需约 3 秒（向量化环境吞吐 ~12k env-step/s）。
 
 ## 参数调整指南
 

@@ -1,0 +1,889 @@
+{
+  "protocolVersion": "1.5.0",
+  "messageType": "AlgoInput",
+  "traceId": "05e21527-ce9a-4434-a28d-7f2dd96d9b8e",
+  "sourceSystem": "densesame_csv_import",
+  "schemaVersion": "AlgoInput-1.5.0",
+  "timestamp": "2026-04-15T10:15:36+08:00",
+  "payload": {
+    "taskId": "TASK-data-densesame-1",
+    "orderId": "202601060001-1",
+    "materialItems": [
+      {
+        "itemId": "ITEM-001",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-002",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-003",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-004",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-005",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-006",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-007",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-008",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-009",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-010",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-011",
+        "skuCode": "nti070",
+        "name": "nti070-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 510.0,
+          "width": 390.0,
+          "height": 200.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-012",
+        "skuCode": "nti071",
+        "name": "nti071-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 330.0,
+          "height": 210.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-013",
+        "skuCode": "nti071",
+        "name": "nti071-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 330.0,
+          "height": 210.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-014",
+        "skuCode": "nti071",
+        "name": "nti071-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 330.0,
+          "height": 210.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-015",
+        "skuCode": "nti071",
+        "name": "nti071-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 330.0,
+          "height": 210.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-016",
+        "skuCode": "nti071",
+        "name": "nti071-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 330.0,
+          "height": 210.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-017",
+        "skuCode": "nti071",
+        "name": "nti071-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 330.0,
+          "height": 210.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-018",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-019",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-020",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-021",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-022",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-023",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-024",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-025",
+        "skuCode": "nti072",
+        "name": "nti072-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 390.0,
+          "width": 390.0,
+          "height": 300.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-026",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-027",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-028",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-029",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-030",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-031",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-032",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-033",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-034",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      },
+      {
+        "itemId": "ITEM-035",
+        "skuCode": "nti073",
+        "name": "nti073-LINX",
+        "qty": 1,
+        "dimensions": {
+          "length": 420.0,
+          "width": 370.0,
+          "height": 260.0
+        },
+        "weight": 1.0,
+        "gripType": "vacuum",
+        "orderId": "202601060001-1",
+        "orientationRules": {
+          "orientationMode": "ORTHOGONAL_ONLY",
+          "allowedOrientations": [
+            "xyz",
+            "yxz"
+          ],
+          "canRotateX": false,
+          "canRotateY": false,
+          "canRotateZ": true
+        }
+      }
+    ],
+    "existingPallets": [],
+    "scene": {
+      "pallet": {
+        "palletType": "CUSTOM",
+        "dimensions": {
+          "length": 1000.0,
+          "width": 1200.0,
+          "height": 144.0
+        },
+        "maxLoadWeight": 1000.0,
+        "maxLoadHeight": 1600.0
+      },
+      "robots": [
+        {
+          "robotId": "RB-01",
+          "toolType": "vacuum",
+          "maxPayload": 35.0,
+          "maxReachRadius": 2200.0
+        }
+      ],
+      "constraints": {
+        "materialKnowledge": {
+          "mode": "ALL_KNOWN_REORDERABLE",
+          "reorderAllowed": true
+        },
+        "palletPolicy": {
+          "mode": "UNTIL_ALL_ITEMS_PLACED"
+        },
+        "bufferPolicy": {
+          "mode": "NO_BUFFER"
+        },
+        "mixedSkuAllowed": true,
+        "stabilityLevel": "MEDIUM"
+      }
+    }
+  }
+}
