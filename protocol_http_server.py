@@ -26,6 +26,7 @@ ALGO_ENDPOINT = "/v1/algorithms/pallet-plans"
 
 SUPPORTED_ALGORITHMS = frozenset({"ga3d", "ga3d-seam", "3d"})
 SUPPORTED_ORIENTATION_CODES = frozenset({"xyz", "yxz"})
+DEFAULT_SOLVER_TIME_LIMIT_SECONDS = 90
 
 
 class ProtocolError(Exception):
@@ -813,7 +814,7 @@ def handle_algo_request(body: dict[str, Any]) -> dict[str, Any]:
             details=[{"code": 2001, "path": "payload.scene.constraints.mixedSkuAllowed", "message": "multiple SKU values are present"}],
         )
 
-    time_limit_seconds = 8.0
+    time_limit_seconds = DEFAULT_SOLVER_TIME_LIMIT_SECONDS
     algorithm = "ga3d"
     pop_size = 1024
     extra = payload.get("extra")

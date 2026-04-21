@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 from protocol_http_server import (
     ALGO_ENDPOINT,
+    DEFAULT_SOLVER_TIME_LIMIT_SECONDS,
     ProtocolError,
     ProtocolHandler,
     SolveOutcome,
@@ -185,6 +186,32 @@ class ProtocolHttpServerTests(unittest.TestCase):
         self.assertEqual([pallet["palletId"] for pallet in pallets], ["P-LOCKED", "P-EMPTY"])
         self.assertEqual(pallets[0]["placements"][0]["itemId"], "ITEM-OLD")
         self.assertEqual(pallets[1]["placements"][0]["itemId"], "ITEM-NEW")
+
+    def test_missing_solver_time_limit_uses_540_second_default(self) -> None:
+        fake_placement = SimpleNamespace(
+            instance_id="ITEM-001",
+            box_type_id="SKU-001",
+            size_x=0.3,
+            size_y=0.2,
+            size_z=0.15,
+            x=0.15,
+            y=0.1,
+            z=0.075,
+            yaw=0.0,
+        )
+        fake_outcome = SolveOutcome(
+            plan_result=SimpleNamespace(placements=[fake_placement]),
+            resolved_algorithm="ga3d",
+        )
+
+        with patch("protocol_http_server._solve_one_pallet", return_value=fake_outcome) as solve_mock:
+            handle_algo_request(_build_request(extra={"solver": {}}))
+
+        solve_mock.assert_called_once()
+        self.assertEqual(
+            solve_mock.call_args.kwargs["time_limit_seconds"],
+            DEFAULT_SOLVER_TIME_LIMIT_SECONDS,
+        )
 
     def test_invalid_orientation_code_raises_protocol_error(self) -> None:
         request_body = _build_request(
