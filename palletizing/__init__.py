@@ -23,6 +23,7 @@ from .multitype_planner import (
     plan_multitype_palletizing_beam,
     plan_multitype_palletizing_fill2d,
     plan_multitype_palletizing_ga3d,
+    plan_multitype_palletizing_ga3d_seam,
 )
 from .planner import (
     BoxSpec,
@@ -68,5 +69,6 @@ __all__ = [
     "plan_multitype_palletizing_beam",
     "plan_multitype_palletizing_fill2d",
     "plan_multitype_palletizing_ga3d",
+    "plan_multitype_palletizing_ga3d_seam",
     "plan_palletizing",
 ]

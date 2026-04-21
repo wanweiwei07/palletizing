@@ -707,6 +707,21 @@ def plan_multitype_palletizing_ga3d(
     )
 
 
+def plan_multitype_palletizing_ga3d_seam(
+    boxes: list[TaskBox],
+    pallet: PalletSpec,
+    time_limit_seconds: float = 60.0,
+    pop_size: int = 2048,
+) -> MultiTypePlanResult:
+    """Backward-compatible alias for the GA3D service entrypoint."""
+    return plan_multitype_palletizing_ga3d(
+        boxes=boxes,
+        pallet=pallet,
+        time_limit_seconds=time_limit_seconds,
+        pop_size=pop_size,
+    )
+
+
 def plan_multitype_palletizing_layer_first(
     boxes: list[TaskBox],
     pallet: PalletSpec,

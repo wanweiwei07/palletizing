@@ -6,3 +6,7 @@ dist/
 build/
 .eggs/
 .claude/
+.vs/*
+.tmp_wheels/*
+*.log
+algo-server.stderr.log
